@@ -48,7 +48,7 @@ app.use("/images", express.static("upload/images"));
 app.post("/upload", upload.single("product"), (req, res) => {
   res.json({
     success: 1,
-    image_url: `${HOSTED_URL}/images/${req.file.filename}`, // Use hosted URL
+    image_url: `${"https://e-commerce-backend-sxn6.onrender.com"}/images/${req.file.filename}`, // Use hosted URL
   });
 });
 
